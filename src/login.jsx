@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const Login = () => {
   const [email, setEmail] = useState("");
-  const [password, setPasswored] = useState("");
+  const [password, setPassword] = useState("");
 
   return (
     <Box style={{ width: "300px" }}>
