@@ -1,11 +1,7 @@
-import Header from "./header"
+import Bottom from "./Bottom";
 
 function App() {
-  return (
-    <>
-      <Header/>
-    </>
-  )
+  return <Bottom />;
 }
 
 export default App;
