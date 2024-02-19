@@ -13,9 +13,8 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
-const postsRef = ref(database, "posts/");
 
-function userDataUpload(uid, name, email) {
+export function userDataUpload(uid, name, email) {
   set(ref(database, "users/" + uid), {
     name: name,
     email: email,
@@ -25,18 +24,20 @@ function userDataUpload(uid, name, email) {
   });
 }
 
-function miniitterUpload(name, text, uid, id) {
-  set(ref(database, "posts/" + id), {
-    name: name,
+export function miniitterUpload(text, uid, postId) {
+  set(ref(database, "users/" + uid + "/posts/" + postId), {
     text: text,
     time: Date.now(),
-    uid: uid,
   }).then(() => {
     console.log("업로드 완");
   });
 }
+// miniitterUpload("이것ssss은추가할ㅇㅇ것입", "sssss", "m3");
 
-onValue(postsRef, (snapshot) => {
-  const data = snapshot.val();
-  console.log(data);
-});
+export function liveUpdate() {
+  const postsRef = ref(database, "users/" + "sssss" + "/posts/");
+  onValue(postsRef, (snapshot) => {
+    const data = snapshot.val();
+    console.log(data);
+  });
+}
