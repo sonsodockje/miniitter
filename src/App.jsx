@@ -1,7 +1,13 @@
-import Bottom from "./Bottom";
+import Bottom from "./components/Bottom";
+import Header from "./components/Header";
 
 function App() {
-  return <Bottom />;
+  return (
+    <>
+      <Header />
+      <Bottom />
+    </>
+  );
 }
 
 export default App;
