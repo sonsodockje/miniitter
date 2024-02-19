@@ -1,5 +1,11 @@
+import Header from "./header"
+
 function App() {
-  return <>test</>;
+  return (
+    <>
+      <Header/>
+    </>
+  )
 }
 
 export default App;
