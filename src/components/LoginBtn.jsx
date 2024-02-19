@@ -41,9 +41,7 @@ export const LoginBtn = () => {
               </Button>
             </Dialog.Close>
             <Dialog.Close>
-              <Button>
-                로그인
-              </Button>
+              <Button>로그인</Button>
             </Dialog.Close>
           </Flex>
         </Dialog.Content>
@@ -103,9 +101,7 @@ export const SignupBtn = () => {
               </Button>
             </Dialog.Close>
             <Dialog.Close>
-              <Button>
-                회원가입
-              </Button>
+              <Button>회원가입</Button>
             </Dialog.Close>
           </Flex>
         </Dialog.Content>
